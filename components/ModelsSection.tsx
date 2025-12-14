@@ -19,9 +19,9 @@ const ModelsSection: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-teal-100/50 rounded-full blur-3xl -z-10"></div>
           
           <img 
-            src="https://robotlab.com/cdn/shop/files/KettyBot_3_colors.png?v=1686064843" 
-            alt="Línea de robots KettyBot en colores Blanco, Negro y Amarillo" 
-            className="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700"
+            src="https://res.cloudinary.com/dg4wbuppq/image/upload/v1765751427/Pudu-Robotics_dvn5ml.jpg" 
+            alt="Flota de robots Pudu Robotics adaptables a su marca" 
+            className="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 rounded-xl"
           />
           
           {/* Color swatches simulation */}
