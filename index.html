@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent a Robot | RaaS Solutions</title>
+    <meta name="description" content="Automatización de Alto Nivel con Cero Riesgo. Robot as a Service para la industria moderna." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#0f172a', // Slate 900 (Text)
+                primary: '#f0fdfa', // Teal 50 (Very light background)
+                secondary: '#ccfbf1', // Teal 100 (Secondary accents)
+                accent: '#0d9488', // Teal 600 (Primary Action/Brand)
+                accentHover: '#0f766e', // Teal 700
+                light: '#ffffff', // White
+                muted: '#64748b', // Slate 500
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-secondary selection:text-brand-accent">
+    <div id="root"></div>
+  </body>
+</html>
