@@ -1,9 +1,12 @@
 import React from 'react';
 import { LockIcon, ShieldCheckIcon, NetworkIcon } from './ui/Icons';
+import { useTranslation } from 'react-i18next';
 
 const SecuritySection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
-    <section id="seguridad" className="py-24 bg-brand-primary relative">
+    <section id="problema" className="py-24 bg-brand-primary relative">
       {/* Subtle pattern or gradient */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
 
@@ -13,10 +16,10 @@ const SecuritySection: React.FC = () => {
             <div className="p-2 bg-teal-100 rounded-full">
               <ShieldCheckIcon className="w-8 h-8 text-brand-accent" />
             </div>
-            <span>Seguridad de Datos Inquebrantable</span>
+            <span>{t('problem.badge')}</span>
           </h2>
           <p className="text-brand-muted max-w-2xl mx-auto text-lg">
-            Entendemos que sus datos operativos son críticos. Nuestra arquitectura RaaS está construida con seguridad militar desde el primer día.
+            {t('problem.description')}
           </p>
         </div>
 
@@ -26,9 +29,9 @@ const SecuritySection: React.FC = () => {
             <div className="w-14 h-14 bg-cyan-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors">
               <LockIcon className="w-7 h-7 text-cyan-600" />
             </div>
-            <h3 className="text-xl font-bold text-brand-dark mb-3">Cifrado de Extremo a Extremo</h3>
+            <h3 className="text-xl font-bold text-brand-dark mb-3">{t('problem.feat1Title')}</h3>
             <p className="text-brand-muted leading-relaxed">
-              Todos los comandos enviados a los robots y la telemetría recibida están protegidos mediante protocolos TLS 1.3 y cifrado AES-256 en reposo. Sus datos nunca son legibles por terceros no autorizados.
+              {t('problem.feat1Desc')}
             </p>
           </div>
 
@@ -37,9 +40,9 @@ const SecuritySection: React.FC = () => {
             <div className="w-14 h-14 bg-teal-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-100 transition-colors">
               <NetworkIcon className="w-7 h-7 text-brand-accent" />
             </div>
-            <h3 className="text-xl font-bold text-brand-dark mb-3">Aislamiento de Red</h3>
+            <h3 className="text-xl font-bold text-brand-dark mb-3">{t('problem.feat2Title')}</h3>
             <p className="text-brand-muted leading-relaxed">
-              Nuestros robots operan en redes privadas virtuales (VPN) aisladas de su red corporativa principal. Utilizamos una arquitectura Zero Trust para garantizar que ningún dispositivo comprometido pueda afectar su infraestructura crítica.
+              {t('problem.feat2Desc')}
             </p>
           </div>
         </div>

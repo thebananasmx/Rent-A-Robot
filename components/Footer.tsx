@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-brand-primary border-t border-teal-100 pt-16 pb-8">
       <div className="container mx-auto px-6">
@@ -14,30 +17,30 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-brand-dark">Rent a Robot</span>
             </div>
             <p className="text-brand-muted text-sm leading-relaxed">
-              Democratizando la automatización industrial a través del modelo Robot as a Service. Soluciones limpias, seguras y escalables.
+              {t('footer.desc')}
             </p>
           </div>
 
           <div>
-            <h4 className="text-brand-dark font-bold mb-6">Empresa</h4>
+            <h4 className="text-brand-dark font-bold mb-6">{t('footer.company')}</h4>
             <ul className="space-y-3 text-sm text-brand-muted">
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Sobre Nosotros</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Carreras</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Prensa</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">{t('footer.about')}</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">{t('footer.careers')}</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">{t('footer.press')}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-brand-dark font-bold mb-6">Legal</h4>
+            <h4 className="text-brand-dark font-bold mb-6">{t('footer.legal')}</h4>
             <ul className="space-y-3 text-sm text-brand-muted">
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Privacidad</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Términos de Servicio</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Seguridad</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">{t('footer.privacy')}</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">{t('footer.terms')}</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">{t('footer.security')}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-brand-dark font-bold mb-6">Contacto</h4>
+            <h4 className="text-brand-dark font-bold mb-6">{t('footer.contact')}</h4>
             <ul className="space-y-3 text-sm text-brand-muted">
               <li>soporte@rentarobot.com</li>
               <li>+1 (555) 123-4567</li>
@@ -52,8 +55,8 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-teal-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-muted">
-          <p>&copy; {new Date().getFullYear()} Rent a Robot Inc. Todos los derechos reservados.</p>
-          <p className="mt-2 md:mt-0 font-medium">Diseñado con enfoque Mobile-First & Security-First.</p>
+          <p>&copy; {new Date().getFullYear()} Rent a Robot Inc. {t('footer.rights')}</p>
+          <p className="mt-2 md:mt-0 font-medium">{t('footer.design')}</p>
         </div>
       </div>
     </footer>
