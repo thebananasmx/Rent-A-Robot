@@ -28,15 +28,15 @@ const ModelsSection: React.FC = () => {
           <div className="grid grid-cols-3 gap-8 mt-12 max-w-md mx-auto">
              <div className="text-center group cursor-default">
                 <div className="w-6 h-6 rounded-full bg-white border border-gray-200 shadow-sm mx-auto mb-3 group-hover:scale-125 transition-transform ring-2 ring-transparent group-hover:ring-gray-100"></div>
-                <span className="text-xs font-bold text-brand-muted uppercase tracking-widest">Minimal White</span>
+                <span className="text-xs font-bold text-brand-muted uppercase tracking-widest">Blanco Minimal</span>
              </div>
              <div className="text-center group cursor-default">
                 <div className="w-6 h-6 rounded-full bg-gray-800 shadow-sm mx-auto mb-3 group-hover:scale-125 transition-transform ring-2 ring-transparent group-hover:ring-gray-200"></div>
-                <span className="text-xs font-bold text-brand-muted uppercase tracking-widest">Tech Black</span>
+                <span className="text-xs font-bold text-brand-muted uppercase tracking-widest">Negro Tech</span>
              </div>
              <div className="text-center group cursor-default">
                 <div className="w-6 h-6 rounded-full bg-yellow-400 shadow-sm mx-auto mb-3 group-hover:scale-125 transition-transform ring-2 ring-transparent group-hover:ring-yellow-100"></div>
-                <span className="text-xs font-bold text-brand-muted uppercase tracking-widest">Brand Yellow</span>
+                <span className="text-xs font-bold text-brand-muted uppercase tracking-widest">Amarillo Marca</span>
              </div>
           </div>
         </div>

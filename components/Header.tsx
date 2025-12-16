@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { MenuIcon, XIcon } from './ui/Icons';
-import { NavItem } from '../types';
-
-const navItems: NavItem[] = [
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Seguridad', href: '#seguridad' },
-  { label: 'Precios', href: '#precios' },
-  { label: 'Contacto', href: '#contacto' },
-];
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,6 +12,13 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navItems = [
+    { label: 'Servicios', href: '#servicios' },
+    { label: 'Problema', href: '#problema' },
+    { label: 'Funcionalidad', href: '#funcionalidad' },
+    { label: 'Contacto', href: '#contacto' },
+  ];
 
   return (
     <header 
@@ -44,13 +43,14 @@ const Header: React.FC = () => {
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a 
-              key={item.label} 
+              key={item.href} 
               href={item.href}
               className={`text-sm font-medium transition-colors relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-brand-accent after:left-0 after:-bottom-1 after:transition-all hover:after:w-full ${isScrolled ? 'text-brand-muted hover:text-brand-accent' : 'text-brand-muted hover:text-brand-accent'}`}
             >
               {item.label}
             </a>
           ))}
+          
           <a 
             href="#contacto"
             className="px-5 py-2.5 text-sm font-bold bg-brand-accent text-white rounded-full shadow-lg shadow-brand-accent/20 hover:bg-brand-accentHover transition-all transform hover:scale-105"
@@ -59,13 +59,15 @@ const Header: React.FC = () => {
           </a>
         </nav>
 
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="md:hidden text-brand-dark p-2"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <XIcon className="text-brand-dark" /> : <MenuIcon className="text-brand-dark" />}
-        </button>
+        {/* Mobile Controls */}
+        <div className="md:hidden flex items-center gap-4">
+          <button 
+            className="text-brand-dark p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <XIcon className="text-brand-dark" /> : <MenuIcon className="text-brand-dark" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
@@ -74,7 +76,7 @@ const Header: React.FC = () => {
           <nav className="flex flex-col gap-4">
             {navItems.map((item) => (
               <a 
-                key={item.label} 
+                key={item.href} 
                 href={item.href}
                 className="text-lg font-medium text-brand-dark hover:text-brand-accent py-2 border-b border-gray-50"
                 onClick={() => setIsMobileMenuOpen(false)}

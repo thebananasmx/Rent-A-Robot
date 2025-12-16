@@ -3,7 +3,7 @@ import { LockIcon, ShieldCheckIcon, NetworkIcon } from './ui/Icons';
 
 const SecuritySection: React.FC = () => {
   return (
-    <section id="seguridad" className="py-24 bg-brand-primary relative">
+    <section id="problema" className="py-24 bg-brand-primary relative">
       {/* Subtle pattern or gradient */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
 
@@ -13,10 +13,10 @@ const SecuritySection: React.FC = () => {
             <div className="p-2 bg-teal-100 rounded-full">
               <ShieldCheckIcon className="w-8 h-8 text-brand-accent" />
             </div>
-            <span>Seguridad de Datos Inquebrantable</span>
+            <span>Rompiendo Barreras de Entrada</span>
           </h2>
           <p className="text-brand-muted max-w-2xl mx-auto text-lg">
-            Entendemos que sus datos operativos son críticos. Nuestra arquitectura RaaS está construida con seguridad militar desde el primer día.
+            Sabemos que el hardware es caro y el acceso a laboratorios es limitado. Rent A Robot democratiza la ingeniería robótica.
           </p>
         </div>
 
@@ -26,9 +26,9 @@ const SecuritySection: React.FC = () => {
             <div className="w-14 h-14 bg-cyan-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors">
               <LockIcon className="w-7 h-7 text-cyan-600" />
             </div>
-            <h3 className="text-xl font-bold text-brand-dark mb-3">Cifrado de Extremo a Extremo</h3>
+            <h3 className="text-xl font-bold text-brand-dark mb-3">Adiós al Hardware Costoso</h3>
             <p className="text-brand-muted leading-relaxed">
-              Todos los comandos enviados a los robots y la telemetría recibida están protegidos mediante protocolos TLS 1.3 y cifrado AES-256 en reposo. Sus datos nunca son legibles por terceros no autorizados.
+              Olvídese de invertir miles de dólares en robots, baterías y refacciones. Pague solo por el tiempo de uso. Acceda a equipos de última generación sin riesgo de capital ni mantenimiento.
             </p>
           </div>
 
@@ -37,9 +37,9 @@ const SecuritySection: React.FC = () => {
             <div className="w-14 h-14 bg-teal-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-100 transition-colors">
               <NetworkIcon className="w-7 h-7 text-brand-accent" />
             </div>
-            <h3 className="text-xl font-bold text-brand-dark mb-3">Aislamiento de Red</h3>
+            <h3 className="text-xl font-bold text-brand-dark mb-3">Más allá de la Simulación</h3>
             <p className="text-brand-muted leading-relaxed">
-              Nuestros robots operan en redes privadas virtuales (VPN) aisladas de su red corporativa principal. Utilizamos una arquitectura Zero Trust para garantizar que ningún dispositivo comprometido pueda afectar su infraestructura crítica.
+              Los simuladores (Gazebo, Webots) son útiles, pero no representan la fricción, el ruido de los sensores o la física real. Valide sus algoritmos en el mundo real, donde importa, desde cualquier lugar del mundo.
             </p>
           </div>
         </div>
