@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { MenuIcon, XIcon, GlobeIcon } from './ui/Icons';
 import { useTranslation } from 'react-i18next';
-import i18nInstance from '../i18n';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
   
-  // Use 'es' as safe fallback if language is undefined
+  // Safe language access using the hook's instance
   const currentLang = i18n.language || 'es';
 
   const toggleLanguage = () => {
-    // If it starts with 'es', switch to 'en', otherwise 'es'
+    // Determine new language based on current prefix
     const newLang = currentLang.startsWith('es') ? 'en' : 'es';
-    // Use the imported instance to ensure the change is registered globally
-    i18nInstance.changeLanguage(newLang);
+    // Use the hook's instance to trigger a re-render
+    i18n.changeLanguage(newLang);
   };
 
   useEffect(() => {
