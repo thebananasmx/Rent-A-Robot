@@ -1,15 +1,15 @@
 export interface Lead {
   companyName: string;
   email: string;
-  interest: 'Development' | 'Research' | 'Education' | 'Enterprise';
+  interest: 'Logistics' | 'Manufacturing' | 'Services' | 'Other';
   timestamp: number;
 }
 
 export enum InterestType {
-  Development = 'Development',
-  Research = 'Research',
-  Education = 'Education',
-  Enterprise = 'Enterprise'
+  Logistics = 'Logistics',
+  Manufacturing = 'Manufacturing',
+  Services = 'Services',
+  Other = 'Other'
 }
 
 export interface NavItem {
