@@ -43,16 +43,21 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Visual Element - Robot Photo */}
+          {/* Visual Element - Robot Video */}
           <div className="lg:w-1/2 relative w-full">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group ring-1 ring-gray-100">
               <div className="absolute inset-0 bg-gradient-to-tr from-teal-900/10 to-transparent z-10 pointer-events-none"></div>
               
-              <img 
-                src="https://www.servibot.mx/web/image/product.template/37650/image_1024?unique=447a1ae" 
-                alt="Robot industrial en laboratorio remoto" 
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
+              >
+                <source src="https://res.cloudinary.com/dg4wbuppq/video/upload/v1765855583/Robots_Corriendo_Ca%CC%81mara_Siguie%CC%81ndolos_aielun.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               
               {/* Floating Key Stats - Glassmorphism Light */}
               <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md border border-white/50 p-4 rounded-xl shadow-lg">
