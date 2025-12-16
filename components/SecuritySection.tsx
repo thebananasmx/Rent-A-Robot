@@ -1,10 +1,7 @@
 import React from 'react';
 import { LockIcon, ShieldCheckIcon, NetworkIcon } from './ui/Icons';
-import { useTranslation } from 'react-i18next';
 
 const SecuritySection: React.FC = () => {
-  const { t } = useTranslation();
-
   return (
     <section id="problema" className="py-24 bg-brand-primary relative">
       {/* Subtle pattern or gradient */}
@@ -16,10 +13,10 @@ const SecuritySection: React.FC = () => {
             <div className="p-2 bg-teal-100 rounded-full">
               <ShieldCheckIcon className="w-8 h-8 text-brand-accent" />
             </div>
-            <span>{t('problem.badge')}</span>
+            <span>Rompiendo Barreras de Entrada</span>
           </h2>
           <p className="text-brand-muted max-w-2xl mx-auto text-lg">
-            {t('problem.description')}
+            Sabemos que el hardware es caro y el acceso a laboratorios es limitado. Rent A Robot democratiza la ingeniería robótica.
           </p>
         </div>
 
@@ -29,9 +26,9 @@ const SecuritySection: React.FC = () => {
             <div className="w-14 h-14 bg-cyan-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors">
               <LockIcon className="w-7 h-7 text-cyan-600" />
             </div>
-            <h3 className="text-xl font-bold text-brand-dark mb-3">{t('problem.feat1Title')}</h3>
+            <h3 className="text-xl font-bold text-brand-dark mb-3">Adiós al Hardware Costoso</h3>
             <p className="text-brand-muted leading-relaxed">
-              {t('problem.feat1Desc')}
+              Olvídese de invertir miles de dólares en robots, baterías y refacciones. Pague solo por el tiempo de uso. Acceda a equipos de última generación sin riesgo de capital ni mantenimiento.
             </p>
           </div>
 
@@ -40,9 +37,9 @@ const SecuritySection: React.FC = () => {
             <div className="w-14 h-14 bg-teal-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-100 transition-colors">
               <NetworkIcon className="w-7 h-7 text-brand-accent" />
             </div>
-            <h3 className="text-xl font-bold text-brand-dark mb-3">{t('problem.feat2Title')}</h3>
+            <h3 className="text-xl font-bold text-brand-dark mb-3">Más allá de la Simulación</h3>
             <p className="text-brand-muted leading-relaxed">
-              {t('problem.feat2Desc')}
+              Los simuladores (Gazebo, Webots) son útiles, pero no representan la fricción, el ruido de los sensores o la física real. Valide sus algoritmos en el mundo real, donde importa, desde cualquier lugar del mundo.
             </p>
           </div>
         </div>

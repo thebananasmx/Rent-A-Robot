@@ -1,21 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { MenuIcon, XIcon, GlobeIcon } from './ui/Icons';
-import { useTranslation } from 'react-i18next';
+import { MenuIcon, XIcon } from './ui/Icons';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { t, i18n } = useTranslation();
-  
-  // Safe language access using the hook's instance
-  const currentLang = i18n.language || 'es';
-
-  const toggleLanguage = () => {
-    // Determine new language based on current prefix
-    const newLang = currentLang.startsWith('es') ? 'en' : 'es';
-    // Use the hook's instance to trigger a re-render
-    i18n.changeLanguage(newLang);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,10 +14,10 @@ const Header: React.FC = () => {
   }, []);
 
   const navItems = [
-    { label: t('nav.services'), href: '#servicios' },
-    { label: t('nav.security'), href: '#problema' },
-    { label: t('nav.features'), href: '#funcionalidad' },
-    { label: t('nav.contact'), href: '#contacto' },
+    { label: 'Servicios', href: '#servicios' },
+    { label: 'Problema', href: '#problema' },
+    { label: 'Funcionalidad', href: '#funcionalidad' },
+    { label: 'Contacto', href: '#contacto' },
   ];
 
   return (
@@ -63,41 +51,16 @@ const Header: React.FC = () => {
             </a>
           ))}
           
-          <button 
-            onClick={toggleLanguage}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border transition-all hover:shadow-sm ${
-              isScrolled 
-              ? 'border-gray-200 hover:border-brand-accent text-brand-dark bg-white' 
-              : 'border-gray-300 hover:border-brand-accent text-brand-dark bg-white/50 backdrop-blur-sm'
-            }`}
-            title="Switch Language"
-          >
-             <GlobeIcon className="w-4 h-4" />
-             <span className="text-xs font-bold uppercase tracking-wide">
-               {currentLang.substring(0,2)}
-             </span>
-          </button>
-
           <a 
             href="#contacto"
             className="px-5 py-2.5 text-sm font-bold bg-brand-accent text-white rounded-full shadow-lg shadow-brand-accent/20 hover:bg-brand-accentHover transition-all transform hover:scale-105"
           >
-            {t('nav.start')}
+            Comenzar Ahora
           </a>
         </nav>
 
         {/* Mobile Controls */}
         <div className="md:hidden flex items-center gap-4">
-          <button 
-            onClick={toggleLanguage}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 bg-white text-brand-dark shadow-sm"
-          >
-             <GlobeIcon className="w-4 h-4" />
-             <span className="text-xs font-bold uppercase">
-               {currentLang.substring(0,2)}
-             </span>
-          </button>
-
           <button 
             className="text-brand-dark p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -126,7 +89,7 @@ const Header: React.FC = () => {
               className="mt-4 w-full text-center px-5 py-3 font-bold bg-brand-accent text-white rounded-lg hover:bg-brand-accentHover transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {t('nav.start')}
+              Comenzar Ahora
             </a>
           </nav>
         </div>
