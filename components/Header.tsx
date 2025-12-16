@@ -14,10 +14,10 @@ const Header: React.FC = () => {
   }, []);
 
   const navItems = [
-    { label: 'Servicios', href: '#servicios' },
-    { label: 'Problema', href: '#problema' },
-    { label: 'Funcionalidad', href: '#funcionalidad' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Services', href: '#servicios' },
+    { label: 'Problem', href: '#problema' },
+    { label: 'Features', href: '#funcionalidad' },
+    { label: 'Contact', href: '#contacto' },
   ];
 
   return (
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
             href="#contacto"
             className="px-5 py-2.5 text-sm font-bold bg-brand-accent text-white rounded-full shadow-lg shadow-brand-accent/20 hover:bg-brand-accentHover transition-all transform hover:scale-105"
           >
-            Comenzar Ahora
+            Start Now
           </a>
         </nav>
 
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
               className="mt-4 w-full text-center px-5 py-3 font-bold bg-brand-accent text-white rounded-lg hover:bg-brand-accentHover transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Comenzar Ahora
+              Start Now
             </a>
           </nav>
         </div>

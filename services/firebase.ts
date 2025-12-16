@@ -45,12 +45,12 @@ export const saveLeadToFirebase = async (lead: Lead): Promise<ServiceResponse> =
   if (isSuccess) {
     return {
       success: true,
-      message: "¡Gracias! Hemos recibido su solicitud. Nos pondremos en contacto pronto."
+      message: "Thank you! We have received your request. We will be in touch soon."
     };
   } else {
     return {
       success: false,
-      message: "Hubo un error al procesar su solicitud. Por favor intente nuevamente."
+      message: "There was an error processing your request. Please try again."
     };
   }
 };

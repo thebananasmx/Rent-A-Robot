@@ -40,7 +40,7 @@ const ContactForm: React.FC = () => {
       }
     } catch (error) {
       setStatus('error');
-      setMessage('Ocurrió un error inesperado.');
+      setMessage('An unexpected error occurred.');
     }
   };
 
@@ -50,19 +50,19 @@ const ContactForm: React.FC = () => {
         <div className="bg-white border border-gray-100 rounded-3xl shadow-2xl shadow-teal-900/10 p-8 md:p-14">
           
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Empiece a Programar Ahora</h2>
-            <p className="text-brand-muted text-lg">Solicite acceso a la API, documentación del SDK y reserve sus primeras horas de laboratorio remoto.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Start Programming Now</h2>
+            <p className="text-brand-muted text-lg">Request API access, SDK documentation, and reserve your first remote lab hours.</p>
           </div>
 
           {status === 'success' ? (
             <div className="bg-emerald-50 border border-emerald-200 text-emerald-700 p-8 rounded-2xl text-center">
-              <p className="text-2xl font-bold mb-2">✓ Solicitud Recibida</p>
+              <p className="text-2xl font-bold mb-2">✓ Request Received</p>
               <p className="text-emerald-600">{message}</p>
               <button 
                 onClick={() => setStatus('idle')}
                 className="mt-6 px-6 py-2 bg-white text-emerald-600 font-semibold rounded-full border border-emerald-100 hover:bg-emerald-50 transition-colors"
               >
-                Enviar otra consulta
+                Send another inquiry
               </button>
             </div>
           ) : (
@@ -70,7 +70,7 @@ const ContactForm: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="companyName" className="block text-sm font-semibold text-brand-dark mb-2">
-                    Nombre / Organización
+                    Name / Organization
                   </label>
                   <input
                     type="text"
@@ -80,12 +80,12 @@ const ContactForm: React.FC = () => {
                     value={formData.companyName}
                     onChange={handleChange}
                     className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 transition-all placeholder-gray-400"
-                    placeholder="Ej. Desarrollador Independiente / Universidad X"
+                    placeholder="Ex. Independent Developer / University X"
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-brand-dark mb-2">
-                    Correo Electrónico
+                    Email Address
                   </label>
                   <input
                     type="email"
@@ -95,14 +95,14 @@ const ContactForm: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 transition-all placeholder-gray-400"
-                    placeholder="usuario@dominio.com"
+                    placeholder="user@domain.com"
                   />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="interest" className="block text-sm font-semibold text-brand-dark mb-2">
-                  Tipo de Uso Principal
+                  Primary Use Case
                 </label>
                 <div className="relative">
                   <select
@@ -112,10 +112,10 @@ const ContactForm: React.FC = () => {
                     onChange={handleChange}
                     className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 appearance-none transition-all cursor-pointer"
                   >
-                    <option value={InterestType.Development}>Desarrollo y Prototipado</option>
-                    <option value={InterestType.Research}>Investigación (R&D)</option>
-                    <option value={InterestType.Education}>Educación / Académico</option>
-                    <option value={InterestType.Enterprise}>Uso Corporativo a Escala</option>
+                    <option value={InterestType.Development}>Development & Prototyping</option>
+                    <option value={InterestType.Research}>Research (R&D)</option>
+                    <option value={InterestType.Education}>Education / Academic</option>
+                    <option value={InterestType.Enterprise}>Enterprise / Corporate Scale</option>
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-brand-muted">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -139,12 +139,12 @@ const ContactForm: React.FC = () => {
                       : 'bg-brand-accent text-white hover:bg-brand-accentHover hover:shadow-teal-500/30 hover:-translate-y-1'
                   }`}
                 >
-                  {status === 'submitting' ? 'Procesando...' : 'Solicitar Acceso a la Plataforma'}
+                  {status === 'submitting' ? 'Processing...' : 'Request Platform Access'}
                 </button>
               </div>
               
               <p className="text-xs text-center text-brand-muted mt-4">
-                Recibirá credenciales de acceso y documentación del SDK tras la verificación.
+                You will receive access credentials and SDK documentation after verification.
               </p>
             </form>
           )}

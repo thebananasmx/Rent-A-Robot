@@ -14,30 +14,30 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-brand-dark">Rent a Robot</span>
             </div>
             <p className="text-brand-muted text-sm leading-relaxed">
-              Democratizando la automatización industrial a través del modelo Robot as a Service. Soluciones limpias, seguras y escalables.
+              Democratizing industrial automation through the Robot as a Service model. Clean, secure, and scalable solutions.
             </p>
           </div>
 
           <div>
-            <h4 className="text-brand-dark font-bold mb-6">Empresa</h4>
+            <h4 className="text-brand-dark font-bold mb-6">Company</h4>
             <ul className="space-y-3 text-sm text-brand-muted">
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Sobre Nosotros</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Carreras</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Prensa</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">Careers</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">Press</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-brand-dark font-bold mb-6">Legal</h4>
             <ul className="space-y-3 text-sm text-brand-muted">
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Privacidad</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Términos de Servicio</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Seguridad</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">Privacy</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-brand-accent transition-colors">Security</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-brand-dark font-bold mb-6">Contacto</h4>
+            <h4 className="text-brand-dark font-bold mb-6">Contact</h4>
             <ul className="space-y-3 text-sm text-brand-muted">
               <li>soporte@rentarobot.com</li>
               <li>+1 (555) 123-4567</li>
@@ -52,8 +52,8 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-teal-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-muted">
-          <p>&copy; {new Date().getFullYear()} Rent a Robot Inc. Todos los derechos reservados.</p>
-          <p className="mt-2 md:mt-0 font-medium">Diseñado con enfoque Mobile-First & Security-First.</p>
+          <p>&copy; {new Date().getFullYear()} Rent a Robot Inc. All rights reserved.</p>
+          <p className="mt-2 md:mt-0 font-medium">Designed with a Mobile-First & Security-First approach.</p>
         </div>
       </div>
     </footer>
