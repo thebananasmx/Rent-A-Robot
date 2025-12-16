@@ -75,10 +75,10 @@ const StabilitySection: React.FC = () => {
                     <p className="mb-1"><span className="text-purple-400">import</span> robot_interface <span className="text-purple-400">as</span> ri</p>
                     <p className="mb-1">bot = ri.connect(id=<span className="text-yellow-300">"PUDU-04"</span>)</p>
                     <p className="mb-1">bot.move_forward(speed=<span className="text-blue-400">0.5</span>)</p>
-                    <p className="mb-4">></p>
-                    <p className="text-white bg-gray-800 p-2 rounded animate-pulse">> Iniciando conexión...</p>
-                    <p className="text-white bg-gray-800 p-2 rounded mt-1">> Controladores de motor activos.</p>
-                    <p className="text-white bg-gray-800 p-2 rounded mt-1">> Stream OK. Latencia: 21ms</p>
+                    <p className="mb-4">&gt;</p>
+                    <p className="text-white bg-gray-800 p-2 rounded animate-pulse">&gt; Iniciando conexión...</p>
+                    <p className="text-white bg-gray-800 p-2 rounded mt-1">&gt; Controladores de motor activos.</p>
+                    <p className="text-white bg-gray-800 p-2 rounded mt-1">&gt; Stream OK. Latencia: 21ms</p>
                 </div>
             </div>
           </div>
